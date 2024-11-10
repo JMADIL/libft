@@ -2,7 +2,7 @@
 
 int main()
 {
-	printf("%s", ft_strtrim("aaaaaaabbbbababahelloworldaaabababa", "ab"));
+	
 }
 
 

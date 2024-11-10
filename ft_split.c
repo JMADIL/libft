@@ -6,7 +6,7 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:03:59 by ajamoun           #+#    #+#             */
-/*   Updated: 2024/11/09 19:11:46 by ajamoun          ###   ########.fr       */
+/*   Updated: 2024/11/10 11:08:02 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 
 static void ft_free(char **arr)
 {
-   int i;
+    int i;
 
-   i = 0;
-   while (arr[i])
-   {
-      free(arr[i]);
-      i++;
-   }
-   free(arr);
+    if (!arr)
+        return;
+    i = 0;
+    while (arr[i])
+    {
+        free(arr[i]);
+        i++;
+    }
+    free(arr);
 }
 static int word_len(const char *s, char c, int start)
 {
@@ -96,11 +98,5 @@ char **ft_split(char const *s, char c)
    result = malloc((word_count(s, c) + 1) * sizeof(char *));
    if(!result)
       return (NULL);
-   result = word_cpy(s, c , result);
-   if(!result)
-   {
-      ft_free(result);
-      return (NULL);
-   }
-   return (result);
+   return (word_cpy(s, c, result));
 }
