@@ -6,13 +6,13 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 01:06:50 by ajamoun           #+#    #+#             */
-/*   Updated: 2024/11/04 01:14:20 by ajamoun          ###   ########.fr       */
+/*   Updated: 2024/11/12 10:39:47 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*mapi;
 	size_t	len;

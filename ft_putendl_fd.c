@@ -6,16 +6,16 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 18:07:01 by ajamoun           #+#    #+#             */
-/*   Updated: 2024/11/06 16:58:09 by ajamoun          ###   ########.fr       */
+/*   Updated: 2024/11/12 10:59:29 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-	if(!s || fd < 0)
-		return; 
+	if (!s || fd < 0)
+		return ;
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }

@@ -6,13 +6,13 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:43:46 by ajamoun           #+#    #+#             */
-/*   Updated: 2024/10/25 15:49:58 by ajamoun          ###   ########.fr       */
+/*   Updated: 2024/11/12 10:59:44 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 

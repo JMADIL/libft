@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/03 23:07:20 by ajamoun           #+#    #+#             */
-/*   Updated: 2024/11/11 17:43:12 by ajamoun          ###   ########.fr       */
+/*   Created: 2024/11/11 13:05:53 by ajamoun           #+#    #+#             */
+/*   Updated: 2024/11/12 10:56:46 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	char	*strs;
-	size_t	i;
-	size_t	j;
-
-	if (!s1 || !s2)
-		return (NULL);
-	i = ft_strlen(s1);
-	j = ft_strlen(s2);
-	strs = malloc((i + j + 1) * sizeof(char));
-	if (!strs)
-		return (NULL);
-	ft_strlcpy(strs, s1, i + 1);
-	ft_strlcat(strs, s2, i + j + 1);
-	return (strs);
+	if (!lst || !f)
+		return ;
+	while (lst)
+	{
+		(*f)(lst->content);
+		lst = lst->next;
+	}
 }

@@ -6,16 +6,16 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 15:35:36 by ajamoun           #+#    #+#             */
-/*   Updated: 2024/11/01 18:55:47 by ajamoun          ###   ########.fr       */
+/*   Updated: 2024/11/12 10:58:46 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t i;
-		
+	size_t	i;
+
 	i = 0;
 	if (!dst && !src)
 		return (NULL);

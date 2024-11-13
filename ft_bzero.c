@@ -6,13 +6,13 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 15:07:10 by ajamoun           #+#    #+#             */
-/*   Updated: 2024/10/31 15:12:09 by ajamoun          ###   ########.fr       */
+/*   Updated: 2024/11/12 10:55:11 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-   ft_memset(s, 0, n);
+	ft_memset(s, 0, n);
 }

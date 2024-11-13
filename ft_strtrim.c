@@ -6,22 +6,21 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 03:38:44 by ajamoun           #+#    #+#             */
-/*   Updated: 2024/11/06 18:11:45 by ajamoun          ###   ########.fr       */
+/*   Updated: 2024/11/12 10:40:35 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *trim;
-	size_t start;
-	size_t end;
-	
+	char	*trim;
+	size_t	start;
+	size_t	end;
+
 	start = 0;
 	end = ft_strlen(s1);
-	
-	if(!s1 || !set)
+	if (!s1 || !set)
 		return (NULL);
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;

@@ -6,7 +6,7 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 02:12:38 by ajamoun           #+#    #+#             */
-/*   Updated: 2024/11/09 18:27:51 by ajamoun          ###   ########.fr       */
+/*   Updated: 2024/11/12 10:55:22 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,24 @@
 
 static int	n_len(int n)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	if (n <= 0)
 		i++;
 	while (n != 0)
 	{
 		n = n / 10;
-		i++; 
+		i++;
 	}
 	return (i);
 }
-char *ft_itoa(int n)
+
+char	*ft_itoa(int n)
 {
-	int x;
-	char *str;
-	
+	int		x;
+	char	*str;
+
 	x = n_len(n);
 	str = malloc((x + 1) * sizeof(char));
 	if (!str)
@@ -39,7 +40,7 @@ char *ft_itoa(int n)
 	{
 		str[0] = '0';
 		str[1] = '\0';
-		return (str); 
+		return (str);
 	}
 	if (n == -2147483648)
 	{
@@ -50,7 +51,7 @@ char *ft_itoa(int n)
 	else if (n < 0)
 	{
 		str[0] = '-';
-		n  = -n;
+		n = -n;
 	}
 	str[x] = '\0';
 	while (n > 0)
