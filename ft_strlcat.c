@@ -6,7 +6,7 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 22:48:14 by ajamoun           #+#    #+#             */
-/*   Updated: 2024/11/12 10:49:57 by ajamoun          ###   ########.fr       */
+/*   Updated: 2024/11/14 14:12:51 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	src_len = ft_strlen(src);
+	if (!dst && dstsize == 0)
+		return (src_len);
 	dst_len = ft_strlen(dst);
 	if (dst_len >= dstsize)
 		return (src_len + dstsize);

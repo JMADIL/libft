@@ -6,7 +6,7 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 01:06:50 by ajamoun           #+#    #+#             */
-/*   Updated: 2024/11/12 10:39:47 by ajamoun          ###   ########.fr       */
+/*   Updated: 2024/11/14 14:18:58 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*mapi;
 	size_t	len;
 	size_t	i;
-
+	if (!s || !f)
+		return (NULL);
 	len = ft_strlen(s);
 	mapi = malloc((len + 1) * sizeof(char));
 	if (!mapi)

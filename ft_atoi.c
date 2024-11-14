@@ -6,7 +6,7 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 16:58:13 by ajamoun           #+#    #+#             */
-/*   Updated: 2024/11/13 13:08:21 by ajamoun          ###   ########.fr       */
+/*   Updated: 2024/11/13 15:02:44 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,10 @@ int	ft_atoi(const char *str)
 	}
 	return (rs * s);
 }
-#include <stdio.h>
+// #include <stdio.h>
 
-int	main(void)
-{
-	printf("%d\n", ft_atoi("-155294569898988456426556123"));
-	printf("%d\n", atoi("-155294569898988456426556123"));
-}
+// int	main(void)
+// {
+// 	printf("%d\n", ft_atoi("-155294569898988456426556123"));
+// 	printf("%d\n", atoi("-155294569898988456426556123"));
+// }

@@ -6,7 +6,7 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 22:07:43 by ajamoun           #+#    #+#             */
-/*   Updated: 2024/11/12 13:46:08 by ajamoun          ###   ########.fr       */
+/*   Updated: 2024/11/14 13:55:16 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,15 @@ char	*ft_strnstr(const char *str, const char *substr, size_t len)
 	size_t	n;
 
 	i = 0;
+	if (!str && len == 0)
+		return (NULL);
 	if (substr[0] == '\0')
 		return ((char *)str);
 	while (str[i] != '\0' && i < len)
 	{
 		n = 0;
-		while ((i + n) < len && substr[n] && str[i + n] && str[i + n] == substr[n])
+		while ((i + n) < len && substr[n] && str[i + n] && str[i
+				+ n] == substr[n])
 		{
 			n++;
 		}
